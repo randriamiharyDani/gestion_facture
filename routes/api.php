@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\ClientsController;
+use App\Http\Controllers\Api\FacturesController;
 use App\Http\Controllers\Api\ProduitsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +22,4 @@ Route::get('/produits' , [ProduitsController::class , 'index']);
 Route::put('/produit/update/{id}' , [ProduitsController::class, 'update_produit']);
 Route::delete('/produit/delete/{id}' , [ProduitsController::class, 'delete_produit']);
 
+Route::post('/facture' , [FacturesController::class , 'store']);
