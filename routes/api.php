@@ -27,3 +27,4 @@ Route::get('/factures' , [FacturesController::class , 'index']);
 Route::get('/facture/{id}' , [FacturesController::class , 'show']);
 Route::put('/facture/update/{id}' , [FacturesController::class, 'update_facture']);
 Route::delete('/facture/delete/{id}' , [FacturesController::class, 'delete_facture']);
+Route::get('/facture_detail' , [FacturesController::class, 'get_facture_detail']);

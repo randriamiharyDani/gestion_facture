@@ -21,9 +21,9 @@ class FacturesController extends Controller
             'date_echeance' => $request->input('date_echeance'),
             'statut' => $request->input('statut', 'en attente'),
             'notes' => $request->input('notes', ''),
-            'total_ht' => 0,
-            'total_tva' => 0,
-            'total_ttc' => 0
+            // 'total_ht' => 0,
+            // 'total_tva' => 0,
+            // 'total_ttc' => 0
        ]);
 
         $total_ht = 0;
@@ -49,9 +49,13 @@ class FacturesController extends Controller
                 'total_ligne' => $ligne_total_ttc
             ]);
 
+
+
             // Calculer les totaux
             $total_ht += $ligne['quantite'] * $ligne['prix_unitaire'];
-            $total_tva += ($ligne['quantite'] * $ligne['prix_unitaire']) * ($ligne['tva'] / 100);
+            $total_tva += $total_ht * ($ligne['tva'] / 100);
+            $total_ttc += $ligne_total_ttc;
+
         }
         // 3. Mettre à jour la facture avec les totaux
         $facture->update([
@@ -145,6 +149,13 @@ class FacturesController extends Controller
           }
           $facture->delete();
           return response()->json(['message' => 'Facture supprimée avec succès']);
+     }
+
+     public function get_facture_detail() {
+        $facture_detail = Detail_facture::with('facture' , 'produit')
+            ->get();
+        return response()->json($facture_detail);
+
      }
 
 }
