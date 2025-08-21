@@ -23,3 +23,7 @@ Route::put('/produit/update/{id}' , [ProduitsController::class, 'update_produit'
 Route::delete('/produit/delete/{id}' , [ProduitsController::class, 'delete_produit']);
 
 Route::post('/facture' , [FacturesController::class , 'store']);
+Route::get('/factures' , [FacturesController::class , 'index']);
+Route::get('/facture/{id}' , [FacturesController::class , 'show']);
+Route::put('/facture/update/{id}' , [FacturesController::class, 'update_facture']);
+Route::delete('/facture/delete/{id}' , [FacturesController::class, 'delete_facture']);
