@@ -72,4 +72,24 @@ class ProduitsController extends Controller
         $produit->delete();
         return response()->json(['message' => 'Produit deleted successfully'], 200);
     }
+
+    public function chercherProduit(Request $request) {
+        $produit = Produit::query() ;
+        if($request->has('nom')) {
+            $produit->where('nom' , 'like' , '%' . $request->nom . '%') ;
+        }
+        // recuprerer des resultats
+        $resultat = $produit->get() ;
+
+        if($resultat->isEmpty()){
+            return response()->json([
+                'message' => 'Aucun produit trouvé',
+                'data' =>  []
+             ], 404) ;
+        }
+        return response()->json([
+            'message' => 'Produits trouvés',
+            'data' =>  $resultat
+        ], 200) ;
+    }
 }

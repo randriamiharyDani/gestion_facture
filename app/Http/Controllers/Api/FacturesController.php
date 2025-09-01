@@ -12,9 +12,9 @@ class FacturesController extends Controller
 {
      public function store(Request $request) {
 
-     $numero_facture = 'FAC-' . time();
+        $numero_facture = 'FAC-' . time();
 
-       $facture = Facture::create([
+        $facture = Facture::create([
             'numero_facture' => $numero_facture,
             'client_id' => $request->input('client_id'),
             'date_emission' => $request->input('date_emission'),

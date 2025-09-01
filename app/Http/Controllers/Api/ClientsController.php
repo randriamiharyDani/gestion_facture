@@ -86,4 +86,31 @@ class ClientsController extends Controller
         return response()->json($client, 200);
     }
 
+    // Tableau avec recherche
+    public function chercherClient(Request $request)
+    {
+        $query = Client::query();
+
+        //  Recherche
+        if ($search = $request->input('search')) {
+            $query->where(function ($q) use ($search) {
+                $q->where('nom', 'like', "%$search%")
+                    ->orWhere('email', 'like', "%$search%");
+            });
+        }
+
+        // 🔃 Tri dynamique
+        $sortBy = $request->input('sort_by', 'nom'); // champ par défaut
+        $sortOrder = $request->input('sort_order', 'asc'); // asc ou desc
+        $query->orderBy($sortBy, $sortOrder);
+
+        // 📄 Pagination
+        $perPage = $request->input('per_page', 10); // nombre d’éléments par page
+        $clients = $query->paginate($perPage);
+
+        return response()->json($clients);
+    }
+
+
+
 }
