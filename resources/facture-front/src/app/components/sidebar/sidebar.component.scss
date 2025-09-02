@@ -1,0 +1,7 @@
+.active {
+  @apply bg-cyan-400 text-white flex flex-row gap-2 ;
+ }
+
+ .sidebar-items {
+  @apply hover:text-blue-400 hover:bg-cyan-400 px-7 py-2 rounded-lg flex flex-row gap-2 transition ;
+ }
