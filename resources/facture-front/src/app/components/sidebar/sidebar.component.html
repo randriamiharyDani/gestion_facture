@@ -1,11 +1,13 @@
 <!-- 🌙 Sidebar -->
 <div class="flex h-screen">
-<aside class="w-64 bg-gray-900 text-white flex flex-col p-6 space-y-6">
+<aside class="w-64 bg-white text-black shadow-xl flex flex-col p-6 space-y-6">
   <h1 class="title">GESTION DE FACTURE</h1>
   <nav class="flex-1">
     <ul class="space-y-5 mt-7">
       <li>
-        <div [routerLink]="['/']" routerLinkActive="active"
+        <div [routerLink]="['/']"
+            routerLinkActive="active"
+             [routerLinkActiveOptions]="{ exact: true }"
           class="sidebar-items">
           <svg version="1" xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" viewBox="0 0 48 48" enable-background="new 0 0 48 48">
             <polygon fill="#E8EAF6" points="42,39 6,39 6,23 24,6 42,23"></polygon>

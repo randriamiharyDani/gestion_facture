@@ -1,11 +1,12 @@
 .active {
-  @apply bg-cyan-400 text-white flex flex-row gap-2 ;
- }
+  @apply border !border-cyan-500 bg-white text-black shadow-md flex flex-row gap-2;
+}
+
 
  .sidebar-items {
-  @apply hover:text-black  hover:bg-cyan-400 px-9 py-2 rounded-lg flex flex-row gap-2 transition border border-cyan-400 ;
+  @apply hover:text-black hover:border-cyan-400  px-9 py-2 rounded-lg flex flex-row gap-2 transition border border-cyan-100 ;
  }
 
  .title {
-  @apply text-lg font-bold tracking-wide  ;
+  @apply text-lg font-bold tracking-wide text-[#6366f1] ;
  }
