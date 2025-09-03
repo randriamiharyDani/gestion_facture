@@ -1,1 +1,62 @@
-<p>client works!</p>
+<div class="min-h-screen">
+
+  <div class=" bg-gray-900 mb-5 p-5">
+    <div class="flex flex-row justify-between">
+      <h2 class="font-mono text-2xl text-white">
+        Clients
+      </h2>
+      <label for="">
+        <input type="text" placeholder="Rechercher..."
+          class="p-2 border border-cyan-400 rounded-md focus:outline-none focus:ring-2 focus:cyan-300" />
+      </label>
+    </div>
+  </div>
+  <hr>
+
+
+  <div class="grid grid-cols-3 gap-2 p-2">
+    <!-- Colonne principale (2/3) -->
+    <div class="col-span-2 p-6 bg-white rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4 text-gray-800">Liste des Clients</h2>
+      <table class="min-w-full border border-gray-200">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="py-2 px-4 border-b text-left text-gray-600">ID</th>
+            <th class="py-2 px-4 border-b text-left text-gray-600">Nom</th>
+            <th class="py-2 px-4 border-b text-center text-gray-600">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-gray-50">
+            <td class="py-2 px-4 border-b">1</td>
+            <td class="py-2 px-4 border-b">Razafindrakoto Benjamin</td>
+            <td class="py-2 px-4 border-b text-center space-x-2">
+              <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Supprimer</button>
+              <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Modifier</button>
+            </td>
+          </tr>
+          <tr class="hover:bg-gray-50">
+            <td class="py-2 px-4 border-b">2</td>
+            <td class="py-2 px-4 border-b">Randriamihary Dani</td>
+            <td class="py-2 px-4 border-b text-center space-x-2">
+              <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Supprimer</button>
+              <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Modifier</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Colonne secondaire (1/3) -->
+    <div class=" bg-white h-40 rounded-lg p-6">
+      <h1 class="text-2xl font-bold text-gray-800 mb-4">Ajout Clients</h1>
+      <div class="flex mb-4">
+        <input type="text" id="taskInput" placeholder="Entre le nom du client"
+          class="flex-grow p-2 rounded-l-md border border-gray-300 focus:outline-none" />
+        <button onclick="addTask()" class="bg-indigo-500 text-white px-4 py-2 rounded-r-md hover:bg-indigo-600">
+          Ajouter
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
