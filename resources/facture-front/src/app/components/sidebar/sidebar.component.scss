@@ -3,5 +3,9 @@
  }
 
  .sidebar-items {
-  @apply hover:text-blue-400 hover:bg-cyan-400 px-7 py-2 rounded-lg flex flex-row gap-2 transition ;
+  @apply hover:text-blue-400 hover:bg-cyan-400 px-9 py-2 rounded-lg flex flex-row gap-2 transition border border-cyan-400 ;
+ }
+
+ .title {
+  @apply text-lg font-bold tracking-wide  ;
  }
