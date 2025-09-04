@@ -33,6 +33,27 @@ export class ProduitsComponent {
     joinDate: '06/10/2023',
     createdBy: 'Iori Bowcher',
     activity: 90
+  },  {
+    name: 'Francois',
+    country: 'Slovenia',
+    flag: 'https://flagcdn.com/si.svg',
+    joinDate: '06/10/2023',
+    createdBy: 'Iori Bowcher',
+    activity: 20
+  },  {
+    name: 'Belagny',
+    country: 'Slovenia',
+    flag: 'https://flagcdn.com/si.svg',
+    joinDate: '06/10/2023',
+    createdBy: 'Iori Bowcher',
+    activity: 55
+  },  {
+    name: 'Rapierre',
+    country: 'Slovenia',
+    flag: 'https://flagcdn.com/si.svg',
+    joinDate: '06/10/2023',
+    createdBy: 'Iori Bowcher',
+    activity: 100
   }
 ];
 

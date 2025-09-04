@@ -1,5 +1,6 @@
 .active {
   @apply border !border-cyan-500 bg-white text-black shadow-md flex flex-row gap-2;
+
 }
 
 
@@ -8,5 +9,7 @@
  }
 
  .title {
-  @apply text-lg font-bold tracking-wide text-[#6366f1] ;
+  @apply text-3xl font-bold tracking-wide ;
+    // color: #6366f1;
+    margin-top: 20px;
  }
