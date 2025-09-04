@@ -1,0 +1,81 @@
+<!-- Overlay -->
+<div *ngIf="isOpen" class="fixed inset-0 flex items-center justify-center z-50">
+  <!-- Background -->
+  <div class="absolute inset-0 bg-black bg-opacity-50" (click)="onClose()"></div>
+
+  <!-- Modal -->
+  <div class="relative bg-white rounded-lg shadow-lg max-w-lg w-full p-6 z-10">
+    <!-- Header -->
+    <div class="flex justify-between items-center border-b pb-2 mb-4">
+      <h2 class="text-lg font-semibold text-gray-800">{{ title }}</h2>
+      <button (click)="onClose()" class="text-gray-500 hover:text-gray-700">✖</button>
+    </div>
+
+    <!-- Contenu -->
+    <div class="text-gray-700">
+
+      <form action="" method="post">
+        <div class="flex flex-col mt-4">
+          <label for="prix" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your
+            Nom du produit
+          </label>
+          <input id="in" type="text"
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
+            placeholder="Input" minlength="5" maxlength="100" pattern="[a-zA-Z0-9]+"
+            title="Solo letras y números permitidos" autocomplete="off" required>
+        </div>
+
+        <div class="mt-4">
+          <label for="prix" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre
+            Prix
+          </label>
+          <input type="number" name="prix" id="prix" placeholder=""
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+            required />
+        </div>
+
+        <div class="mt-4">
+          <label for="tva" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre
+            TVA
+          </label>
+          <input type="number" name="tva" id="tva" placeholder=""
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+            required />
+        </div>
+
+        <div class="mt-4">
+          <label for="stock" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre stock
+          </label>
+          <input type="number" name="stock" id="stock" placeholder=""
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+            required />
+        </div>
+
+        <div class="flex flex-col mt-4">
+          <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre stock
+          </label>
+          <textarea name="description" id="description" rows="5" maxlength="256" required=""
+            placeholder=""
+            class="rounded-lg p-4 bg-black/5 border-2 border-solid border-black/10 font-mono font-medium text-sm"></textarea>
+        </div>
+
+        <!-- button -->
+          <div class=" mt-5">
+            <button class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+              Enregistrer
+            </button>
+          </div>
+
+      </form>
+
+
+    </div>
+
+    <!-- Footer -->
+    <div class="flex justify-end mt-6">
+      <button (click)="onClose()" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+        Fermer
+      </button>
+    </div>
+  </div>
+</div>
