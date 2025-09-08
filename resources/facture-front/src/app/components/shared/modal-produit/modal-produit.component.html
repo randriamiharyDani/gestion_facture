@@ -21,26 +21,28 @@
           </label>
           <input id="in" type="text"
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
-            placeholder="Input" minlength="5" maxlength="100" pattern="[a-zA-Z0-9]+"
+            placeholder="" minlength="5" maxlength="100" pattern="[a-zA-Z0-9]+"
             title="Solo letras y números permitidos" autocomplete="off" required>
         </div>
 
-        <div class="mt-4">
-          <label for="prix" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre
-            Prix (ariary)
-          </label>
-          <input type="number" name="prix" id="prix" placeholder=""
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-            required />
-        </div>
+        <div class="flex flex-row mt-4 w-full justify-between gap-2">
+          <div class="w-1/2">
+            <label for="prix" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre
+              Prix (ariary)
+            </label>
+            <input type="number" name="prix" id="prix" placeholder=""
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              required />
+          </div>
 
-        <div class="mt-4">
-          <label for="tva" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre
-            TVA
-          </label>
-          <input type="number" name="tva" id="tva" placeholder=""
-            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-            required />
+          <div class="w-1/2">
+            <label for="tva" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Votre
+              TVA
+            </label>
+            <input type="number" name="tva" id="tva" placeholder=""
+              class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+              required />
+          </div>
         </div>
 
         <div class="mt-4">

@@ -26,6 +26,16 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/fournisseurs/fournisseurs.component')
       .then(m=> m.FournisseursComponent)
   },
+    {
+    path : 'factures',
+    loadComponent: () => import('./pages/factures/factures.component')
+      .then(m=> m.FacturesComponent)
+  },
+     {
+    path : 'devis',
+    loadComponent: () => import('./pages/devis/devis.component')
+      .then(m=> m.DevisComponent)
+  },
    {
     path : 'commandes',
     loadComponent: () => import('./pages//commandes/commandes.component')
@@ -41,6 +51,6 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/parametres/parametres.component')
       .then(m=> m.ParametresComponent)
   },
-  
+
   { path: '**', redirectTo: 'dashboard' }
 ];
